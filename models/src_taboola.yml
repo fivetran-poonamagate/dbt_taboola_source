@@ -1,0 +1,58 @@
+
+version: 2
+
+sources:
+  - name: taboola
+    database: poonam_agate_test
+
+    loader: Fivetran
+    loaded_at_field: _fivetran_synced
+
+    tables:
+      - name: account
+        description: Placeholder.
+
+      - name: campaign
+        description: Placeholder.
+
+      - name: campaign_item
+        description: Placeholder.
+
+      - name: campaign_site_day_report
+        description: Placeholder.
+
+      - name: campaign_type
+        description: Placeholder.
+
+      - name: comment
+        description: Placeholder.
+
+      - name: content_provider_country_report
+        description: Placeholder.
+
+      - name: content_provider_platform_report
+        description: Placeholder.
+
+      - name: country_report
+        description: Placeholder.
+
+      - name: partner_type
+        description: Placeholder.
+
+      - name: platform_report
+        description: Placeholder.
+
+      - name: targeting_country
+        description: Placeholder.
+
+      - name: targeting_os
+        description: Placeholder.
+
+      - name: targeting_platform
+        description: Placeholder.
+
+      - name: targeting_sub_country
+        description: Placeholder.
+
+      - name: top_campaign_content_report
+        description: Placeholder.
