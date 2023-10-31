@@ -23,6 +23,11 @@ vars:
     targeting_platform: "{{ source('taboola','targeting_platform') }}"
     targeting_sub_country: "{{ source('taboola','targeting_sub_country') }}"
     top_campaign_content_report: "{{ source('taboola','top_campaign_content_report') }}"
+    taboola__account_passthrough_columns: []
+    taboola__campaign_passthrough_columns: []
+    taboola__campaign_item_passthrough_columns: []
+    taboola__campaign_site_day_report_passthrough_columns: []
+    taboola__campaign_type_passthrough_columns: []
 
 models:
   dbt_taboola_source:
