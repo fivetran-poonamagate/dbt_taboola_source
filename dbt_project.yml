@@ -2,6 +2,7 @@
 name: 'dbt_taboola_source'
 version: '1.0.0'
 config-version: 2
+require-dbt-version: [">=1.3.0", "<2.0.0"]
 
 profile: 'dbt_taboola_source'
 
@@ -30,6 +31,15 @@ vars:
     taboola__campaign_type_passthrough_columns: []
     taboola__comment_passthrough_columns: []
     taboola__content_provider_country_report_passthrough_columns: []
+    taboola__content_provider_platform_report_passthrough_columns: []
+    taboola__country_report_passthrough_columns: []
+    taboola__partner_type_passthrough_columns: []
+    taboola__platform_report_passthrough_columns: []
+    taboola__targeting_country_passthrough_columns: []
+    taboola__targeting_os_passthrough_columns: []
+    taboola__targeting_platform_passthrough_columns: []
+    taboola__targeting_sub_country_passthrough_columns: []
+    taboola__top_campaign_content_report_passthrough_columns: []
 
 models:
   dbt_taboola_source:

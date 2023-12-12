@@ -5,12 +5,17 @@ sources:
   - name: taboola
     database: poonam_agate_test
 
+    freshness:
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+
     loader: Fivetran
     loaded_at_field: _fivetran_synced
 
     tables:
       - name: account
         description: Placeholder.
+        freshness: null
 
       - name: campaign
         description: Placeholder.
@@ -44,9 +49,11 @@ sources:
 
       - name: targeting_country
         description: Placeholder.
+        freshness: null
 
       - name: targeting_os
         description: Placeholder.
+        freshness: null
 
       - name: targeting_platform
         description: Placeholder.
