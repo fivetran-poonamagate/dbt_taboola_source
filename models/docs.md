@@ -1,4 +1,8 @@
 
+# dimensions
+
+{% docs _fivetran_id %} Unique primary key for the given table. {% enddocs %}
+
 {% docs account_id %} Alphanumeric string for the account id. {% enddocs %}
 
 {% docs campaign_id %} Numeric ID of the campaign. {% enddocs %}
@@ -7,19 +11,27 @@
 
 {% docs date_time %} The reporting date for the associated metrics. {% enddocs %}
 
+{% docs date %} The reporting date for the associated metrics. {% enddocs %}
+
 {% docs approval_state %} Indicates if the item has been approved by Taboola and is ready to be served (approval_state) = APPROVED. {% enddocs %}
 
 {% docs currency %} The currency for columns of type "money". {% enddocs %}
 
+{% docs timezone %} The time zone used for the campaign scheduling rules. {% enddocs %}
+
 # metrics
 
 {% docs spent %} Total amount spent. {% enddocs %}
+
+{% docs campaigns_num %} Number of campaigns for that advertiser. {% enddocs %}
 
 {% docs impressions %} Total number of impressions. {% enddocs %}
 
 {% docs clicks %} Total number of clicks. {% enddocs %}
 
 {% docs conversions %} Total number of conversions. {% enddocs %}
+
+{% docs conversions_value %} Total revenue from conversions. {% enddocs %}
 
 {% docs cpm %} Cost per 1000 impressions. {% enddocs %}
 

@@ -102,6 +102,8 @@ sources:
         identifier: "{{ var('taboola_campaign_site_day_report_identifier','campaign_site_day_report') }}"
         description: Table containing daily performance metrics for campaigns broken down by site.
         columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
           - name: blocking_level
             description: Indicates the level of blocking.
           - name: campaign_id
@@ -147,7 +149,7 @@ sources:
           - name: spent
             description: "{{ doc('spent') }}"
           - name: timezone
-            description: The time zone used for the campaign scheduling rules.
+            description: "{{ doc('timezone') }}"
           - name: vcpm
             description: "{{ doc('vcpm') }}"
           - name: vctr
@@ -157,50 +159,380 @@ sources:
 
       - name: campaign_type
         identifier: "{{ var('taboola_campaign_type_identifier','campaign_type') }}"
-        description: Placeholder.
+        description: Table of campaign types.
+        columns:
+          - name: account_id
+            description: "{{ doc('account_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent account_id.
+          - name: type
+            description: Campaign type.
 
       - name: comment
         identifier: "{{ var('taboola_comment_identifier','comment') }}"
-        description: Placeholder.
+        description: Table of campaign comments.
+        columns:
+          - name: account_id
+            description: "{{ doc('account_id') }}"
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent account_id and campaign_id.
+          - name: comment
+            description: A comment for the campaign.
 
       - name: content_provider_country_report
         identifier: "{{ var('taboola_content_provider_country_report_identifier','content_provider_country_report') }}"
-        description: Placeholder.
+        description: Table containing daily performance metrics for campaigns broken down by content provider and country.
+        columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
+          - name: account_id
+            description: "{{ doc('account_id') }}"
+          - name: campaigns_num
+            description: "{{ doc('campaigns_num') }}"
+          - name: clicks
+            description: "{{ doc('clicks') }}"
+          - name: content_provider
+            description: Alphabetic advertiser ID.
+          - name: content_provider_id
+            description: Numeric advertiser ID.
+          - name: content_provider_name
+            description: Descriptive advertiser name.
+          - name: conversions_value
+            description: "{{ doc('conversions_value') }}"
+          - name: country_name
+            description: 2 letter country code for the given corresponding country.
+          - name: country_value
+            description: Descriptive country name.
+          - name: cpa
+            description: "{{ doc('cpa') }}"
+          - name: cpa_actions_num
+            description: "{{ doc('cpa_actions_num') }}"
+          - name: cpa_actions_num_from_clicks
+            description: "{{ doc('cpa_actions_num_from_clicks') }}"
+          - name: cpa_actions_num_from_views
+            description: "{{ doc('cpa_actions_num_from_views') }}"
+          - name: cpa_clicks
+          - name: cpa_conversion_rate
+            description: "{{ doc('cpa_conversion_rate') }}"
+          - name: cpa_conversion_rate_clicks
+          - name: cpa_conversion_rate_views
+          - name: cpa_views
+          - name: cpc
+            description: "{{ doc('cpc') }}"
+          - name: cpm
+            description: "{{ doc('cpm') }}"
+          - name: ctr
+            description: "{{ doc('ctr') }}"
+          - name: currency
+            description: "{{ doc('currency') }}"
+          - name: date
+            description: "{{ doc('date') }}"
+          - name: impressions
+            description: "{{ doc('impressions') }}"
+          - name: roas
+            description: "{{ doc('roas') }}"
+          - name: spent
+            description: "{{ doc('spent') }}"
+          - name: timezone
+            description: "{{ doc('timezone') }}"
+          - name: vcpm
+            description: "{{ doc('vcpm') }}"
+          - name: vctr
+            description: "{{ doc('vctr') }}"
+          - name: visible_impressions
+            description: "{{ doc('visible_impressions') }}"
 
       - name: content_provider_platform_report
         identifier: "{{ var('taboola_content_provider_platform_report_identifier','content_provider_platform_report') }}"
-        description: Placeholder.
+        description: Table containing daily performance metrics for campaigns broken down by content provider and platform.
+        columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
+          - name: account_id
+            description: "{{ doc('account_id') }}"
+          - name: campaigns_num
+            description: "{{ doc('campaigns_num') }}"
+          - name: clicks
+            description: "{{ doc('clicks') }}"
+          - name: content_provider
+            description: Alphabetic advertiser ID.
+          - name: content_provider_id
+            description: Numeric advertiser ID.
+          - name: content_provider_name
+            description: Descriptive advertiser name.
+          - name: conversions_value
+            description: "{{ doc('conversions_value') }}"
+          - name: cpa
+            description: "{{ doc('cpa') }}"
+          - name: cpa_actions_num
+            description: "{{ doc('cpa_actions_num') }}"
+          - name: cpa_actions_num_from_clicks
+            description: "{{ doc('cpa_actions_num_from_clicks') }}"
+          - name: cpa_actions_num_from_views
+            description: "{{ doc('cpa_actions_num_from_views') }}"
+          - name: cpa_clicks
+          - name: cpa_conversion_rate
+            description: "{{ doc('cpa_conversion_rate') }}"
+          - name: cpa_conversion_rate_clicks
+          - name: cpa_conversion_rate_views
+          - name: cpa_views
+          - name: cpc
+            description: "{{ doc('cpc') }}"
+          - name: cpm
+            description: "{{ doc('cpm') }}"
+          - name: ctr
+            description: "{{ doc('ctr') }}"
+          - name: currency
+            description: "{{ doc('currency') }}"
+          - name: date
+            description: "{{ doc('date') }}"
+          - name: impressions
+            description: "{{ doc('impressions') }}"
+          - name: platform
+            description: Descriptive platform name.
+          - name: roas
+            description: "{{ doc('roas') }}"
+          - name: spent
+            description: "{{ doc('spent') }}"
+          - name: timezone
+            description: "{{ doc('timezone') }}"
+          - name: vcpm
+            description: "{{ doc('vcpm') }}"
+          - name: vctr
+            description: "{{ doc('vctr') }}"
+          - name: visible_impressions
+            description: "{{ doc('visible_impressions') }}"
 
       - name: country_report
         identifier: "{{ var('taboola_country_report_identifier','country_report') }}"
-        description: Placeholder.
+        description: Table containing daily performance metrics for campaigns broken down by country.
+        columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: clicks
+            description: "{{ doc('clicks') }}"
+          - name: conversions_value
+            description: "{{ doc('conversions_value') }}"
+          - name: country
+            description: 2 letter country code for the given corresponding country.
+          - name: country_name
+            description: Descriptive country name.
+          - name: cpa
+            description: "{{ doc('cpa') }}"
+          - name: cpa_actions_num
+            description: "{{ doc('cpa_actions_num') }}"
+          - name: cpa_actions_num_from_clicks
+            description: "{{ doc('cpa_actions_num_from_clicks') }}"
+          - name: cpa_actions_num_from_views
+            description: "{{ doc('cpa_actions_num_from_views') }}"
+          - name: cpa_clicks
+          - name: cpa_conversion_rate
+            description: "{{ doc('cpa_conversion_rate') }}"
+          - name: cpa_conversion_rate_clicks
+          - name: cpa_conversion_rate_views
+          - name: cpa_views
+          - name: cpc
+            description: "{{ doc('cpc') }}"
+          - name: cpm
+            description: "{{ doc('cpm') }}"
+          - name: ctr
+            description: "{{ doc('ctr') }}"
+          - name: currency
+            description: "{{ doc('currency') }}"
+          - name: date
+            description: "{{ doc('date') }}"
+          - name: impressions
+            description: "{{ doc('impressions') }}"
+          - name: roas
+            description: "{{ doc('roas') }}"
+          - name: spent
+            description: "{{ doc('spent') }}"
+          - name: timezone
+            description: "{{ doc('timezone') }}"
+          - name: vcpm
+            description: "{{ doc('vcpm') }}"
+          - name: vctr
+            description: "{{ doc('vctr') }}"
+          - name: visible_impressions
+            description: "{{ doc('visible_impressions') }}"
 
       - name: partner_type
         identifier: "{{ var('taboola_partner_type_identifier','partner_type') }}"
-        description: Placeholder.
+        description: Table of
+        columns:
+          - name: account_id
+            description: "{{ doc('account_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent account_id.
+          - name: type
+            description: The type of partner.
 
       - name: platform_report
         identifier: "{{ var('taboola_platform_report_identifier','platform_report') }}"
-        description: Placeholder.
+        description: Table containing daily performance metrics for campaigns broken down by platform.
+        columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: clicks
+            description: "{{ doc('clicks') }}"
+          - name: conversions_value
+            description: "{{ doc('conversions_value') }}"
+          - name: cpa
+            description: "{{ doc('cpa') }}"
+          - name: cpa_actions_num
+            description: "{{ doc('cpa_actions_num') }}"
+          - name: cpa_actions_num_from_clicks
+            description: "{{ doc('cpa_actions_num_from_clicks') }}"
+          - name: cpa_actions_num_from_views
+            description: "{{ doc('cpa_actions_num_from_views') }}"
+          - name: cpa_clicks
+          - name: cpa_conversion_rate
+            description: "{{ doc('cpa_conversion_rate') }}"
+          - name: cpa_conversion_rate_clicks
+          - name: cpa_conversion_rate_views
+          - name: cpa_views
+          - name: cpc
+            description: "{{ doc('cpc') }}"
+          - name: cpm
+            description: "{{ doc('cpm') }}"
+          - name: ctr
+            description: "{{ doc('ctr') }}"
+          - name: currency
+            description: "{{ doc('currency') }}"
+          - name: date
+            description: "{{ doc('date') }}"
+          - name: impressions
+            description: "{{ doc('impressions') }}"
+          - name: platform
+            description: Abbreviated platform name.
+          - name: platform_name
+            description: Descriptive platform name.
+          - name: roas
+            description: "{{ doc('roas') }}"
+          - name: spent
+            description: "{{ doc('spent') }}"
+          - name: timezone
+            description: "{{ doc('timezone') }}"
+          - name: vcpm
+            description: "{{ doc('vcpm') }}"
+          - name: vctr
+            description: "{{ doc('vctr') }}"
+          - name: visible_impressions
+            description: "{{ doc('visible_impressions') }}"
 
       - name: targeting_country
         identifier: "{{ var('taboola_targeting_country_identifier','targeting_country') }}"
-        description: Placeholder.
+        description: Table containing information about the list of countries to target or exclude for the given campaign.
         freshness: null
+        columns:
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent campaign_id.
+          - name: type
+            description: The type of targeting approach.
+          - name: value
+            description: 2 letter country codes which the campaign will target.
 
       - name: targeting_os
         identifier: "{{ var('taboola_targeting_os_identifier','targeting_os') }}"
-        description: Placeholder.
+        description: Table containing information about the list of operating systems to target or exclude for the given campaign.
         freshness: null
+        columns:
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent campaign_id.
+          - name: os_family
+            description: The operating system.
+          - name: sub_categories
+          - name: type
+            description: The type of targeting approach.
 
       - name: targeting_platform
         identifier: "{{ var('taboola_targeting_platform_identifier','targeting_platform') }}"
-        description: Placeholder.
+        description: Table containing information about the list of platforms to target or exclude for the given campaign.
+        columns:
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent campaign_id.
+          - name: type
+            description: The type of targeting approach.
+          - name: value
+            description: 4 letter abbreviated name of the platform.
 
       - name: targeting_sub_country
         identifier: "{{ var('taboola_targeting_sub_country_identifier','targeting_sub_country') }}"
-        description: Placeholder.
+        description: Table containing information about the list of sub countries to target or exclude for the given campaign.
+        columns:
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: index
+            description: A unique numeric row produced for every concurrent campaign_id.
+          - name: type
+            description: The type of targeting approach.
+          - name: value
+            description: 2 letter abbreviated name of the state.
 
       - name: top_campaign_content_report
         identifier: "{{ var('taboola_top_campaign_content_report_identifier','top_campaign_content_report') }}"
-        description: Placeholder.
+        description: Table listing the top 1000 items for all campaigns.
+        columns:
+          - name: _fivetran_id
+            description: "{{ doc('_fivetran_id') }}"
+          - name: actions
+          - name: actions_num
+          - name: actions_num_from_views
+          - name: campaign_id
+            description: "{{ doc('campaign_id') }}"
+          - name: clicks
+            description: "{{ doc('clicks') }}"
+          - name: conversions_value
+            description: "{{ doc('conversions_value') }}"
+          - name: cpa
+            description: "{{ doc('cpa') }}"
+          - name: cpa_clicks
+          - name: cpa_views
+          - name: cpc
+            description: "{{ doc('cpc') }}"
+          - name: cpm
+            description: "{{ doc('cpm') }}"
+          - name: ctr
+            description: "{{ doc('ctr') }}"
+          - name: currency
+            description: "{{ doc('currency') }}"
+          - name: cvr
+            description: Average conversion rate - calculated as actions / clicks.
+          - name: cvr_clicks
+          - name: cvr_views
+          - name: date
+            description: "{{ doc('date') }}"
+          - name: impressions
+            description: "{{ doc('impressions') }}"
+          - name: item
+            description: The unique ID of the item.
+          - name: item_name
+            description: The unique title (display name) of the item.
+          - name: roas
+            description: "{{ doc('roas') }}"
+          - name: spent
+            description: "{{ doc('spent') }}"
+          - name: thumbnail_url
+            description: The thumbnail url of the item.
+          - name: timezone
+            description: "{{ doc('timezone') }}"
+          - name: url
+            description: The url of the item.
+          - name: vcpm
+            description: "{{ doc('vcpm') }}"
+          - name: vctr
+            description: "{{ doc('vctr') }}"
+          - name: visible_impressions
+            description: "{{ doc('visible_impressions') }}"
