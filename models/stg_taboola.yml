@@ -1,0 +1,141 @@
+
+version: 2
+
+models:
+  - name: stg_taboola__account
+    description: Table of account details.
+    columns:
+      - name: account_id
+        description: "{{ doc('account_id') }}"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__campaign
+    description: Table of all advertising campaigns.
+    columns:
+      - name: campaign_id
+        description: "{{ doc('account_id') }}"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__campaign_item
+    description: Table of campaign items.
+    columns:
+      - name: campaign_item_id
+        description: Unique PK for the stg_taboola__campaign_item table.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__campaign_site_day_report
+    description: Table containing daily performance metrics for campaigns broken down by site.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__campaign_item table.
+        tests:
+          - unique
+          - not_null
+        
+  - name: stg_taboola__campaign_type
+    description: Table of campaign types.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - account_id
+            - index
+
+  - name: stg_taboola__comment
+    description: Table of campaign comments.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - account_id
+            - campaign_id
+            - index
+
+  - name: stg_taboola__content_provider_country_report
+    description: Table containing daily performance metrics for campaigns broken down by content provider and country.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__content_provider_country_report table.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__content_provider_platform_report
+    description: Table containing daily performance metrics for campaigns broken down by content provider and platform.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__content_provider_platform_report table.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__country_report
+    description: Table containing daily performance metrics for campaigns broken down by country.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__content_provider_platform_report table.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__partner_type
+    description: Table of advertising partners.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - account_id
+            - index
+
+  - name: stg_taboola__platform_report
+    description: Table containing daily performance metrics for campaigns broken down by platform.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__platform_report table.
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_taboola__targeting_country
+    description: Table containing information about the list of countries to target or exclude for the given campaign.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - campaign_id
+            - index
+
+  - name: stg_taboola__targeting_os
+    description: Table containing information about the list of operating systems to target or exclude for the given campaign.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - campaign_id
+            - index
+
+  - name: stg_taboola__targeting_platform
+    description: Table containing information about the list of platforms to target or exclude for the given campaign.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - campaign_id
+            - index
+  
+  - name: stg_taboola__targeting_sub_country
+    description: Table containing information about the list of sub countries to target or exclude for the given campaign.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - campaign_id
+            - index
+
+  - name: stg_taboola__top_campaign_content_report
+    description: Table listing the top 1000 items for all campaigns.
+    columns:
+      - name: pk
+        description: Unique PK for the stg_taboola__top_campaign_content_report table.
+        tests:
+          - unique
+          - not_null

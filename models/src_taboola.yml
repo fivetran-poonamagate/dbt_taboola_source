@@ -362,7 +362,7 @@ sources:
 
       - name: partner_type
         identifier: "{{ var('taboola_partner_type_identifier','partner_type') }}"
-        description: Table of
+        description: Table of advertising partners.
         columns:
           - name: account_id
             description: "{{ doc('account_id') }}"
