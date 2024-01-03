@@ -1,0 +1,5 @@
+account_id,id,_fivetran_synced,approval_state,cpc,daily_ad_delivery_model,daily_cap,end_date,is_active,name,spending_limit,spending_limit_model,spent,start_date,status,tracking_code,traffic_allocation_mode
+1111111,11234567,03/10/2023 10:39,APPROVED,0.25,BALANCED,0,30/04/2023,FALSE,campaign_name_1,250,MONTHLY,0,04/11/2022,EXPIRED,utm_source=native&utm_medium=ad,OPTIMIZED
+1111112,11234568,04/10/2023 10:39,APPROVED,0.25,BALANCED,0,30/04/2023,FALSE,campaign_name_2,250,MONTHLY,0,01/02/2023,EXPIRED,utm_source=native&utm_medium=ad,OPTIMIZED
+1111113,11234569,05/10/2023 10:39,APPROVED,0.25,BALANCED,0,30/04/2023,TRUE,campaign_name_3,250,MONTHLY,0,10/02/2023,EXPIRED,,OPTIMIZED
+1111114,11234570,06/10/2023 10:39,APPROVED,0.25,BALANCED,0,30/04/2023,TRUE,campaign_name_4,250,MONTHLY,0,10/02/2023,EXPIRED,,OPTIMIZED

@@ -1,0 +1,5 @@
+_fivetran_id,_fivetran_synced,account_id,campaigns_num,clicks,content_provider,content_provider_id,content_provider_name,conversions_value,country_name,country_value,cpa,cpa_actions_num,cpa_actions_num_from_clicks,cpa_actions_num_from_views,cpa_clicks,cpa_conversion_rate,cpa_conversion_rate_clicks,cpa_conversion_rate_views,cpa_views,cpc,cpm,ctr,currency,date,impressions,roas,spent,timezone,vcpm,vctr,visible_impressions
+eXc1kuH8Qdf7x58qCV3K5r3AlfY=,30/09/2022 18:42,1111111,1,0,content-provider-name1,2222221,Content Provider Name 1,0,MX,Mexico,0,0,,,,0,,,,0,0,0,USD,15/03/2022,1,0,0,PDT,0,0,0
+5vhqC3RZrnNCgl4t1rkvopaBt/U=,01/10/2022 18:42,1111112,1,0,content-provider-name2,2222222,Content Provider Name 2,0,CA,Canada,0,0,,,,0,,,,0,0,0,USD,15/03/2022,2,0,0,PDT,0,0,1
+6NqwbJtwTgmRhKbY5uCf3+QbLlg=,02/10/2022 18:42,1111113,1,22,content-provider-name3,2222223,Content Provider Name 3,0,US,United States,0,0,,,,0,,,,0.165,0.02,0.013031091,USD,15/03/2022,168827,0,3.64,PDT,0.11,0.065880098,33394
+9Xlysjr1AhMmDmiQ8v0swujmZCA=,03/10/2022 18:42,1111114,1,0,content-provider-name4,2222224,Content Provider Name 4,0,ES,Spain,0,0,,,,0,,,,0,0,0,USD,15/03/2022,1,0,0,PDT,0,0,1

@@ -1,0 +1,5 @@
+_fivetran_id,_fivetran_synced,actions,actions_num_from_clicks,actions_num_from_views,campaign_id,clicks,conversions_value,cpa,cpa_clicks,cpa_views,cpc,cpm,ctr,currency,cvr,cvr_clicks,cvr_views,date,impressions,item,item_name,roas,spent,thumbnail_url,timezone,url,vcpm,vctr,visible_impressions
+NGYpTd48uT4fwNoCqe0oA99NSM4=,30/09/2022 19:11,0,0,0,11111111,12,0,0,0,0,0.472,0.19,0.04,USD,0,0,0,21/03/2022,29544,1234567891,Item Name 1,0,5.66,http://website.com/path-1/static/thumbnails/image-name1.jpg,EDT,url1,0.74,0.16,7609
+3zNfGDRISJ8jchXdY899PdU/MZU=,01/10/2022 19:11,,,,11111112,,,,,,,,,,,,,22/03/2022,,1234567892,Item Name 2,,,http://website.com/path-1/static/thumbnails/image-name2.jpg,EDT,url2,,,
+lxVhLMGoNP1xYtwdpfai+5DswjE=,02/10/2022 19:11,0,0,0,11111113,21,0,0,0,0,0.314,0.51,0.16,USD,0,0,0,23/03/2022,12954,1234567893,Item Name 3,0,6.58,http://website.com/path-1/static/thumbnails/image-name3.jpg,EDT,url3,1.11,0.35,5929
+EkbhETlJqLXnOZxVEP0WY8yL4MA=,03/10/2022 19:11,0,0,0,11111114,71,0,0,0,0,0.348,0.37,0.11,USD,0,0,0,24/03/2022,66070,1234567894,Item Name 4,0,24.74,http://website.com/path-1/static/thumbnails/image-name4.jpg,EDT,url4,0.93,0.27,26501

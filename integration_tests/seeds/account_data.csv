@@ -1,0 +1,5 @@
+id,_fivetran_synced,account_id,is_active,language,name,parent_network,timezone,type
+1111111,03/10/2023 10:39,account-name1,TRUE,en,Account Name 1,,,NETWORK
+1111112,04/10/2023 10:39,masterworks-accs227-sc,TRUE,en,Account Name 2,,,PARTNER
+1111113,05/10/2023 10:39,masterworks-fwm264,TRUE,en,Account Name 3,,,PARTNER
+1111114,06/10/2023 10:39,char228,TRUE,en,Account Name 4,,,PARTNER

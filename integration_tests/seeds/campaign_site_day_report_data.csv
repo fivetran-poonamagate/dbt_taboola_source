@@ -1,0 +1,5 @@
+_fivetran_id,_fivetran_synced,blocking_level,campaign_id,campaign_name,clicks,conversions_value,cpa,cpa_actions_num,cpa_actions_num_from_clicks,cpa_actions_num_from_views,cpa_clicks,cpa_conversion_rate,cpa_conversion_rate_clicks,cpa_conversion_rate_views,cpa_views,cpc,cpm,ctr,currency,date_time,impressions,roas,site,site_name,spent,timezone,vcpm,vctr,visible_impressions
+814JW4Fg1f3KJ/oF2J1VhNwLsiU=,30/09/2022 20:31,NONE,11111111,campaign_name_1,0,0,0,0,,,0,0,0,0,0,0,0,0,USD,15/03/2022,22,0,site-name-1,Site Name 1,0,EDT,0,0,7
+NgTiCX/kMl9zH7jv83z9xiSyJgc=,01/10/2022 20:31,NONE,11111112,campaign_name_2,0,0,0,0,,,0,0,0,0,0,0,0,0,USD,16/03/2022,10,0,site-name-2,Site Name 2,0,EDT,0,0,2
+7lkelFtx+xVsl7BE4YXmh6fDktc=,02/10/2022 20:31,NONE,11111113,campaign_name_3,0,0,0,0,,,0,0,0,0,0,0,0,0,USD,17/03/2022,1695,0,site-name-3,Site Name 3,0,EDT,0,0,194
+v5bAOfzFYX9QfUXjsobmi0oLPU0=,03/10/2022 20:31,NONE,11111114,campaign_name_4,0,0,0,0,,,0,0,0,0,0,0,0,0,USD,18/03/2022,325,0,site-name-4,Site Name 4,0,EDT,0,0,50

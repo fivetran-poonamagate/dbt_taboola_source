@@ -1,0 +1,5 @@
+_fivetran_id,_fivetran_synced,campaign_id,clicks,conversions_value,country,country_name,cpa,cpa_actions_num,cpa_actions_num_from_clicks,cpa_actions_num_from_views,cpa_clicks,cpa_conversion_rate,cpa_conversion_rate_clicks,cpa_conversion_rate_views,cpa_views,cpc,cpm,ctr,currency,date,impressions,roas,spent,timezone,vcpm,vctr,visible_impressions
+02Q/pCQZI5GVWV1KlOj3oV6t8Us=,30/09/2022 21:13,1111111,0,0,ES,Spain,0,0,0,0,0,0,0,0,0,0,0,0,USD,15/03/2022,1,0,0,EDT,0,0,1
+F1eR3wtXSKwkKljoA7KepaY6T5I=,01/10/2022 21:13,1111112,0,0,CA,Canada,0,0,0,0,0,0,0,0,0,0,0,0,USD,16/03/2022,2,0,0,EDT,0,0,1
+EjB9SMb9wrWI3MMvRnRYQidsoGY=,02/10/2022 21:13,1111113,0,0,DK,Denmark,0,0,0,0,0,0,0,0,0,0,0,0,USD,17/03/2022,1,0,0,EDT,0,0,0
+7EEFR7ThoupF/WNmiZmePPmoKD0=,03/10/2022 21:13,1111114,0,0,MX,Mexico,0,0,0,0,0,0,0,0,0,0,0,0,USD,18/03/2022,1,0,0,EDT,0,0,0

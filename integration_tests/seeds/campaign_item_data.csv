@@ -1,0 +1,5 @@
+id,_fivetran_synced,approval_state,campaign_id,is_active,status,thumbnail_url,title,type,url
+1111111111,03/10/2023 10:39,REJECTED,11234567,TRUE,REJECTED,https://website.com/image/uploads/2023/03/image-name.jpg,Image Title,ITEM,https://website.com/2023/03/landing-page/
+1111111112,04/10/2023 10:39,REJECTED,11234568,TRUE,REJECTED,https://website.com/image/uploads/2023/03/image-name2.jpg,Image Title 1,ITEM,https://website.com/2023/03/landing-page2/
+1111111113,05/10/2023 10:39,APPROVED,11234569,TRUE,RUNNING,https://website.com/image/uploads/2023/03/image-name3.jpg,Image Title 2,ITEM,https://www.website.com/partners/landing-page/article.html
+1111111114,06/10/2023 10:39,APPROVED,11234570,TRUE,RUNNING,https://website.com/image/uploads/2023/03/image-name4.jpg,Image Title 3,ITEM,https://www.website.com/partners/landing-page/article2.html
