@@ -1,0 +1,44 @@
+
+config-version: 2
+
+name: 'taboola_source_integration_tests'
+version: '0.1.1'
+
+profile: 'integration_tests' 
+
+vars:
+  taboola_source:
+    taboola_schema: taboola_source_integration_tests
+    taboola_account_identifier: "account_data"
+    taboola_campaign_identifier: "campaign_data"
+    taboola_campaign_item_identifier: "campaign_item_data"
+    taboola_campaign_site_day_report_identifier: "campaign_site_day_report_data"
+    taboola_campaign_type_identifier: "campaign_type_data"
+    taboola_comment_identifier: "comment_data"
+    taboola_content_provider_country_report_identifier: "content_provider_country_report_data"
+    taboola_content_provider_platform_report_identifier: "content_provider_platform_report_data"
+    taboola_country_report_identifier: "country_report_data"
+    taboola_partner_type_identifier: "partner_type_data"
+    taboola_platform_report_identifier: "platform_report_data"
+    taboola_targeting_country_identifier: "targeting_country_data"
+    taboola_targeting_os_identifier: "targeting_os_data"
+    taboola_targeting_platform_identifier: "targeting_platform_data"
+    taboola_targeting_sub_country_identifier: "targeting_sub_country_data"
+    taboola_top_campaign_content_report_identifier: "top_campaign_content_report_data"
+
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
+
+seeds:
+  +quote_columns: "{{ true if target.type == 'redshift' else false }}"
+  taboola_source_integration_tests:
+    +column_types:
+      _FIVETRAN_SYNCED: "timestamp"
+      START_DATE: "date"
+      END_DATE: "date"
+      DATE_TIME: "date"
+      DATE: "date"
+      ID: "{{ 'INT64' if target.type == 'bigquery' else 'bigint' }}"
+      ACCOUNT_ID: "{{ 'INT64' if target.type == 'bigquery' else 'bigint' }}"
+      CAMPAIGN_ID: "{{ 'INT64' if target.type == 'bigquery' else 'bigint' }}"
