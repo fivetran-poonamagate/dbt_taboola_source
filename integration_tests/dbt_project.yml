@@ -37,7 +37,7 @@ seeds:
       _FIVETRAN_SYNCED: "timestamp"
       START_DATE: "date"
       END_DATE: "date"
-      DATE_TIME: "date"
+      DATE_TIME: "timestamp"
       DATE: "date"
       ID: "{{ 'INT64' if target.type == 'bigquery' else 'bigint' }}"
       ACCOUNT_ID: "{{ 'INT64' if target.type == 'bigquery' else 'bigint' }}"
