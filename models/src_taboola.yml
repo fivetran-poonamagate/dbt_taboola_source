@@ -3,7 +3,9 @@ version: 2
 
 sources:
   - name: taboola
-    database: poonam_agate_test
+    schema: "{{ var('taboola_schema', 'taboola') }}"
+    database: "{% if target.type != 'spark'%}{{ var('taboola_database', target.database) }}{% endif %}"
+    # database: poonam_agate_test
 
     freshness:
       warn_after: {count: 12, period: hour}
